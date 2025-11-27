@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>J.R. University — Admissions</title>
+<link rel="stylesheet" href="Jr.css">
+</head>
+<body>
+<header>
+  <h1>J.R. University</h1>
+  <p>Admissions Open for 2026</p>
+</header>
+
+<div class="container">
+  <div class="card">
+    <h2>Overview</h2>
+    <p>This university offers top-ranked programs, modern facilities, and excellent placement opportunities.</p>
+    <div class="actions">
+      <button class="btn" onclick="openFees()">Check Course-wise Fees</button>
+      <a class="btn ghost" href="#">Download Brochure</a>
+      <a class="btn" href="#form">Apply Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Popular Courses</h2>
+    <ul>
+      <li>B.Tech CSE</li>
+      <li>MBA</li>
+      <li>BBA</li>
+    </ul>
+  </div>
+
+  <div class="card" id="form">
+    <h2>Application Form</h2>
+    <form onsubmit="submitForm(event)">
+      <label>Full Name
+        <input type="text" id="name" required>
+      </label>
+      <label>Email
+        <input type="email" id="email" required>
+      </label>
+      <label>Phone Number
+        <input type="text" maxlength="10" id="phone" required>
+      </label>
+      <label>State
+        <select id="state" required>
+          <option value="">Select State</option>
+          <option>Uttar Pradesh</option>
+          <option>Delhi</option>
+          <option>Maharashtra</option>
+        </select>
+      </label>
+      <label>Course Interested
+        <select id="course" required>
+          <option value="">Select Course</option>
+          <option>B.Tech</option>
+          <option>MBA</option>
+          <option>BBA</option>
+        </select>
+      </label>
+      <label>Intake Year
+        <select id="year" required>
+          <option>2026</option>
+          <option>2027</option>
+        </select>
+      </label>
+
+      <label>
+        <input type="checkbox" id="consent" required> I agree to be contacted
+      </label>
+
+      <button class="btn" type="submit">Submit</button>
+      <p id="msg"></p>
+    </form>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="feesModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeFees()">&times;</span>
+    <h3>Course-wise Fees</h3>
+    <p><strong>B.Tech CSE:</strong> ₹80,000 – ₹1,20,000 yearly</p>
+    <p><strong>MBA:</strong> ₹1,00,000 – ₹2,50,000 yearly</p>
+    <p><strong>BBA:</strong> ₹60,000 – ₹1,10,000 yearly</p>
+  </div>
+</div>
+
+<script src="Jr.js"></script>
+
+</body>
+</html>
